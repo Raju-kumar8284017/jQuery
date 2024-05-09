@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+    <title>Each method</title>
+    <style type="text/css">
+       
+     
+    
+        
+    </style>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-3">Each method</a>
+        </nav>
+        </div>
+
+        
+              
+           
+
+
+        <div class="container my-5">
+            
+            <ul class="my-5">
+                <li>Orange</li>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Grapes</li>
+            </ul>
+        </div>
+
+        <div id="box"></div>
+
+       
+
+  
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+ 
+
+   <script type="module">
+    
+        $(document).ready(function () {
+           $('li').each(function () {
+              // console.log($(this).text());
+            $(this).text('hello');
+           });
+        });
+
+   
+   </script>
+
+
+</body>
+</html>

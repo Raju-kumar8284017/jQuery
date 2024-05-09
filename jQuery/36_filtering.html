@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+    <title>filtering() method</title>
+    <style type="text/css">
+       
+        #first{
+            width: 1000px;
+            height: 300px;
+            border: 2px solid black;
+            padding: 10px;
+            justify-content: center;
+            background-color: lightgreen;
+        }
+
+       #second{
+            width: 1000px;
+            height: 300px;
+            border: 2px solid black;
+            padding: 10px;
+            justify-content: center;
+            background-color: lightyellow;
+        }
+
+    
+        
+    </style>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-3">filtering() method</a>
+        </nav>
+        </div>
+
+        <div class="container mt-5">
+            <ul>
+              
+                <li class="display-3">filtering()</li>
+                  <h4>there are filtering() method <br>
+                        <span>1) first()</span> <br>
+                        <span>2) last()</span> <br>
+                        <span>3) eq()</span> <br>
+                        <span>4) filter()</span> <br>
+                        <span>5) not())</span> <br>
+                        <span>6) slice()</span> <br>
+                   </h4>
+                
+            </ul>
+
+           
+        </div>
+
+
+        <div class="container my-5">
+            <div id="first">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+            <ul class="my-5">
+                <li>Orange</li>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Grapes</li>
+            </ul>
+            <div id="second">
+                <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+             
+            </div>
+
+       
+
+  
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+ 
+
+   <script type="module">
+       
+       $(document).ready(function () {
+          
+        $('p').first().css('background-color','gold');
+        $('ul li').last().css('background-color','green');
+        $('ul li:eq(2)').last().css('background-color','orange');
+        $('p').filter('.test').css('background-color','yellow');
+      //  $('p').not('.test').css('background-color','blue');
+
+        $('ul li').slice(0,2).css('background-color','red');
+
+
+
+
+    });
+
+   
+   </script>
+
+
+</body>
+</html>

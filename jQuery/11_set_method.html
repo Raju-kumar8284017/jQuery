@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+	<title>set method</title>
+    <style type="text/css">
+       .red1{
+       color: red;
+       }
+       #select{
+        display: none;
+       }
+    </style>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-1">set method</a>
+        </nav>
+        </div>
+
+
+        
+        <ul class="container">
+            <li>text()</li>
+            <li>html()</li>
+            <li>attr()</li>
+            <li>val()</li>
+        </ul>
+
+        <div class="container">
+            <div id="box" class="bg-warning">
+
+                <h1>Testing</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. <span>Excepteur sint occaecat</span>  cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+
+            <hr>
+            <div class="input-group" >
+                <label>first name</label>
+                <input type="text" name="" id="fname">
+                <label>last name</label>
+                <input type="text" name="" id="lname">
+                                <label class="input-label bg-light font-weight-bold p-2"  >Country</label>
+                                <select class="form-control select-menu" id="select" >
+                                    <option>India</option>
+                                    <option>Nepal</option>
+                                    <option>Bangladesh</option>
+                                    <option>Srilanka</option>
+                                    <option>Pakistan</option>
+                                    <option>Bhutan</option>
+                                </select>
+                            </div>
+
+
+            <button id="btn1">click</button>
+            <button id="btn2">get option</button>
+
+            <hr>
+
+
+        </div>
+
+
+        
+ 
+
+
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+   <script type="module">
+
+      $(document).ready(function () {
+    /*-------------text-------------------------------*/    
+        $('#btn1').click(function () {
+            $('#box h1').text("hello");
+            $('#box p').text("this is for testing");
+
+/*-------------------------html----------------------------*/
+            $('#box p').html("this is <span>cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span> for testing");
+        });
+
+
+        $('#btn2').click(function () {
+            $('#select').css('display', 'block');
+        });
+
+        /*-------------------------------------------attr-----------------*/
+
+        $('#box p').attr('class', 'red1')
+
+/*------------set ------val------------------------------*/
+        $('#fname').val('raju');
+        $('#lname').val('kumar');
+
+
+      });
+    
+   
+
+   </script>
+
+
+</body>
+</html>

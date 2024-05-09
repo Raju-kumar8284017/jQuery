@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+    <title>stop Method</title>
+    <style type="text/css">
+       
+        #box{
+            width: 250px;
+            border: 12px solid black;
+            padding: 30px;
+            margin: 10px;
+            position: relative;
+        }
+
+     
+    
+        
+    </style>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-3">stop Method</a>
+        </nav>
+        </div>
+
+        <div class="container mt-5">
+            <ul>
+                <li>stop()</li>
+                
+            </ul>
+        </div>
+
+
+        <div class="container my-5">
+            <div id="box">
+                <span class="font-weight-bold">stop Method</span> 
+            </div>
+
+             
+                <hr>
+                <button id="Animatebtn">Animate</button>
+                <button id="stopbtn">stop</button>
+            </div>
+
+       
+
+  
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+   <!-- $(selector).animate({params},speed, callBack); -->
+
+                           <!--css property use in params-->
+
+   <script type="module">
+        $(document).ready(function () {
+            $('#Animatebtn').click(function () {
+                $('#box').animate({left : '200px'},5000);
+                $('#box').animate({fontSize : '100px'},3000);
+                  
+                            
+            });
+
+          /*----------------------------------------------------*/
+
+            $('#stopbtn').click(function () {
+                $('#box').stop(true);                   //in this only one animate you can stop
+            });                                 
+
+                            //if you want to stop all animation then --property == true ///
+
+
+
+           });
+       
+   
+   </script>
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+	<title>animation Method</title>
+    <style type="text/css">
+        #btn{
+            border-radius: 50%;
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+        }
+        #box{
+            width: 250px;
+            border: 12px solid black;
+            padding: 30px;
+            margin: 10px;
+            position: relative;
+        }
+
+        #box1{
+             width: 250px;
+            border: 12px solid black;
+            padding: 30px;
+            margin: 10px;
+            position: relative;
+        }
+        .red{
+            color: green;
+        }
+        #display{
+            font-size: 30px;
+            background-color: lightgreen;
+            position: fixed;
+            left: 20px;
+            bottom: 30px;
+            height: 200px;
+            width: 300px;
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-3">animation Method</a>
+        </nav>
+        </div>
+
+        <div class="container">
+            <ul>
+                <li>slideDown()</li>
+                <li>slideUp()</li>
+                <li>slideToggle()</li>
+                
+            </ul>
+        </div>
+
+
+        <div class="container my-5">
+            <div id="box">
+                <h1 class="font-weight-bold">animation Method</h1> 
+            </div>
+
+             <div id="box1">
+                <h1 class="font-weight-bold">animation Method</h1> 
+            </div>
+
+                <hr>
+                <button id="Animatebtn">Animate</button>
+            </div>
+
+       
+
+  
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+   <!-- $(selector).animate({params},speed, callBack); -->
+
+                           <!--css property use in params-->
+
+   <script type="module">
+        $(document).ready(function () {
+            $('#Animatebtn').click(function () {
+                $('#box').animate({
+                  left : '200px',
+                  width :"400px",           // we can also use toggle in this
+                  fontSize : '80px'});            // you have to give position
+            });
+
+            $('#Animatebtn').click(function () {
+                $('#box1').animate({left : '200px', fontSize : '10px'}, "slow");
+                $('#box1').animate({top : '200px'},5000);
+                $('#box1').animate({width : '200px'});
+                            
+            });
+              
+                                                    // call back function also use 
+
+                                                 // we can also use toggle in this
+                                                    // you have to give position
+             
+
+           });
+       
+   
+   </script>
+
+
+</body>
+</html>

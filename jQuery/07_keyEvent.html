@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+	<title>key events</title>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-1">key events</a>
+        </nav>
+        </div>
+
+
+        <ul class="container">
+        	<li>keypress()</li>
+        	<li>keyup()</li>
+        	<li>keydown()</li>
+        </ul>
+
+        <div class="container mt-5" style="border: 2px solid black;">
+        	<div class="card">
+        		<div class="card-body">
+        			<h1>Title</h1>
+                    <input type="text" name="" class="form-control">
+        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        		</div>
+        	</div>
+        </div>
+
+
+
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="module">
+
+   	$(document).ready(function () {
+        $('body').keyup(function () {
+           $(this).css('background-color',"orange");
+        });
+
+        $('body').keypress(function () {
+           $(this).css('background-color',"green");
+        });
+
+        $('.card').keydown(function () {
+           $(this).css('background-color',"blue");
+        });
+   		
+   	});
+
+   </script>
+
+
+</body>
+</html>

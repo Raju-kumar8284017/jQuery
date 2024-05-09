@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+    <title>chaining Method</title>
+    <style type="text/css">
+       
+        #outerbox{
+            width: 1000px;
+            height: 700px;
+            border: 2px solid black;
+            margin: 10px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: lightgreen;
+        }
+
+        #mid-box{
+            width: 900px;
+            height: 600px;
+            border: 2px solid black;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: lemonchiffon;
+        }
+
+     #inner-box{
+            width: 800px;
+            height: 500px;
+            border: 2px solid black;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: pink;
+     }
+
+     #box1, #box2, #box3, #box4{
+        height: 300px;
+        width: 150px;
+        border: 1px solid black;
+        margin: 3px;
+        background-color: skyblue;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+     }
+    
+        
+    </style>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-3">chaining Method</a>
+        </nav>
+        </div>
+
+        <div class="container mt-5">
+            <ul>
+                <li>Ancestors()</li>
+                      <span class="ml-5">parent</span><br>
+                      <span class="ml-5">grandparent</span><br>
+                      <span class="ml-5">great-grandparent</span>--><br>
+                             --------<span class="ml-5">parent()</span><br>
+                            ---------- <span class="ml-5">parents()</span><br>
+                           -----------  <span class="ml-5">parentsUntil()</span><br>
+                          ------------   <span class="ml-5">closest()</span><br>
+                         -------------    <span class="ml-5">offsetParent()</span>
+                <li>Descendants()</li>
+                <li>Siblings()</li>
+                <li>filtering()</li>
+                
+            </ul>
+        </div>
+
+
+        <div class="container my-5">
+            <div id="outerbox"  style="Position:relative">
+                <span class="font-weight-bold">outer box</span> 
+                <div id="mid-box">
+                    <span class="font-weight-bold">mid box</span>
+                    <div id="inner-box">
+                        <span class="font-weight-bold">inner-box</span>
+                        <div id="box1">A</div>
+                        <div id="box2">B</div>
+                        <div id="box3">C</div>
+                        <div id="box4">D</div>
+                    </div>
+                </div>
+            </div>
+
+             
+            </div>
+
+       
+
+  
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+ 
+
+   <script type="module">
+       
+       $(document).ready(function () {
+          $('#box3').parent().css('background-color','red');// its target parent box
+    $('#inner-box').parents().css('background-color','yellow');// its target all parents box
+    $('#box4').parentsUntil('#mid-box').css('background-color','blue');
+                                              ;// its target b/w child to  target  
+
+    $('#box4').offsetParent().css('background-color','skyblue');
+                  //its target only those parents which has positive : relative/absolute
+
+       $('#box2').closest('#inner-box').css('background-color','orange');
+
+
+    });
+
+   
+   </script>
+
+
+</body>
+</html>

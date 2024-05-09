@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+	<title>fade Method Method</title>
+    <style type="text/css">
+        #btn{
+            border-radius: 50%;
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+        }
+        #box{
+            border: 12px solid black;
+            padding: 30px;
+            margin: 10px;
+        }
+        .red{
+            color: green;
+        }
+        #display{
+            font-size: 30px;
+            background-color: lightgreen;
+            position: fixed;
+            left: 20px;
+            bottom: 30px;
+            height: 200px;
+            width: 300px;
+            border: 1px solid black;
+        }
+        #scrolltop{
+            background-color: red;
+            position: fixed;
+            right: 20px;
+            bottom: 30px;
+        }
+        #scrollLeft{
+            background-color: red;
+            position: fixed; 
+            bottom: 30px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-3">fade Method</a>
+        </nav>
+        </div>
+
+        <div class="container">
+            <ul>
+                <li>fadeIn()</li>
+                <li>fadeOut()</li>
+                <li>fadeToggle()</li>
+                <li>fadeTo()</li>
+                
+            </ul>
+        </div>
+
+
+        <div class="container my-5">
+            <div id="box">
+                <h1 class="font-weight-bold">fade Method</h1> 
+            </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+
+
+                <hr>
+                <button id="fadeInbtn">fadeIn</button>
+                <button id="fadeOutbtn">fadeOut</button>
+                <button id="fadeTogglebtn">fadeToggle</button>
+                <button id="fadeTobtn">fadeTo</button>
+            </div>
+
+       
+
+  
+    
+
+        
+        
+
+
+
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+   <script type="module">
+        $(document).ready(function () {
+           $('#fadeOutbtn').click(function () {
+                $('#box').fadeOut(2000);         //we can also use "slow" & "fast"
+           });
+
+           $('#fadeInbtn').click(function () {
+                $('#box').fadeIn(5000, function () {
+                    console.log('now its show')      //call back function use also...
+                });                                  //we can also use "slow" & "fast"
+           });
+
+           $('#fadeTogglebtn').click(function () {
+                $('#box').fadeToggle(2000);          //we can also use "slow" & "fast"
+           });
+
+           $('#fadeTobtn').click(function () {  /*//this is a parameter(speed , opacity, 
+                                                                callback)*/
+                $('#box').fadeTo("slow", 0.5)           //we can also use "slow" & "fast"
+                });            
+           });
+       
+   
+   </script>
+
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+	<title>addClass method</title>
+    <style type="text/css">
+        .box{
+            border: 2px solid black;
+        }
+        .first{
+            color: white;
+            background-color: green;
+        }
+         .thrd{
+            color: white;
+            background-color: yellow;
+        }
+        .sec{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-4">addClass & removeClass & toggleClass Method</a>
+        </nav>
+        </div>
+
+
+        
+        <ul class="container">
+            <li>addClass()</li>
+            <li>removeClass()</li>
+            <li>toggleClass()</li>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="box">
+                        <h1>addClass</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <button id="addbtn">addClass</button>
+                    <button id="removebtn">removeClass</button>
+                    <button id="togglebtn">toggleClass</button>
+                </div>
+            </div>
+        </div>
+
+       
+
+    
+
+
+
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+   <script>
+
+        $(document).ready(function () {
+/*-----------------------------------------addCladd------------------------*/
+           $('#addbtn').click(function () {
+            $('.box').addClass("first");
+        });
+
+           $('#addbtn').click(function () {
+            $('.box h1').addClass("sec");
+        });
+
+/*----------------------------removeClass----------------------------------*/
+
+           $('#removebtn').click(function () {
+              $('.box').removeClass('box');
+           });
+
+/*------------------------------------toggleClass------------------------------*/
+
+           $('#togglebtn').click(function () {
+              $('.box').toggleClass('thrd');
+           });
+
+    });
+
+
+   </script>
+
+
+</body>
+</html>

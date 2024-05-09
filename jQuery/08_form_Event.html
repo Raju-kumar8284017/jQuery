@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+	<title>form events</title>
+</head>
+<body>
+
+       <div class="container">
+          <nav class="nav bg-warning">
+            <a href="#" class="nav-link text-white font-weight-bold display-1">form events</a>
+        </nav>
+        </div>
+
+
+        
+        <ul class="container">
+            <li>focus()</li>
+            <li>blur()</li>
+            <li>change()</li>
+            <li>select()</li>
+            <li>submit()</li>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label class="input-label bg-light font-weight-bold p-2" >Name</label>
+                                <input type="text" name="#" class="form-control" id="name">
+                            </div>
+                            <div class="input-group">
+                                <label class="input-label bg-light font-weight-bold p-2" >Email</label>
+                                <input type="email" name="#" class="form-control" id="email">
+                            </div>
+                            <div class="input-group">
+                                <label class="input-label bg-light font-weight-bold p-2" >Password</label>
+                                <input type="Password" name="#" class="form-control" id="Password">
+                            </div>
+                            <div class="input-group">
+                                <label class="input-label bg-light font-weight-bold p-2" >Country</label>
+                                <select class="form-control select-menu" id="select">
+                                    <option>India</option>
+                                    <option>Nepal</option>
+                                    <option>Bangladesh</option>
+                                    <option>Srilanka</option>
+                                    <option>Pakistan</option>
+                                    <option>Bhutan</option>
+                                </select>
+                            </div>
+                                <input type="submit" name="#" class="font-weight-bold btn btn-success" value="register" id="fsubmit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div style="border:2px solid red" id="display">
+            
+        </div>
+
+    
+
+
+
+         <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+   <script type="text/javascript" src="jQuery.js"></script>
+
+   <script type="module">
+
+      $(document).ready(function () {
+        
+        $('#name, #email, #Password, #select').focus(function () {
+            $(this).css("background-color", "skyblue");
+
+
+        });
+
+        $('#name, #email, #Password, #select').blur(function () {
+            $(this).css("background-color", "");
+        });
+
+          $('#select').change(function () {
+              let a = $(this).val();
+
+              $('#display').html(a);
+          });
+
+          $('#name').select(function () {
+              $(this).css('background-color', 'red');
+          });
+
+          $("form").submit(function(){
+             alert("Submitted");
+  
+
+        });
+
+      });
+
+
+   </script>
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+     <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+
+     
+
+
+
+   
+    
+
+  </head>
+  <body>
+       <nav class="nav bg-warning">
+       	  <a href="#" class="nav-link text-white h1 font-wight-bold">Jquery basic structure</a>
+       </nav>
+
+
+       <div class="containor">
+       	 <div class="row justify-content-around mt-5">
+       	 	<div class="col-md-4 bg-light">
+       	 		<div id="box1"style="border: 2px solid black;">
+       	 			<h1 class="h1">title1</h1>
+       	 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+       	 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+       	 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+       	 			consequat.</p>
+       	 		</div>
+       	 	</div>
+       	 	<div class="col-md-4 bg-light">
+       	 		<div id="box2"style="border: 2px solid black;">
+       	 			<h1 class="h1">title2</h1>
+       	 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+       	 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+       	 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+       	 			consequat.</p>
+       	 		</div>
+       	 	</div>
+       	 </div>
+       </div>
+
+<!--------jQuery--------------->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function () {
+			var a = $('#box1').html();
+			console.log(a);
+
+			var b = $('#box2').html();
+			console.log(b);
+		});
+	</script>
+
+  </body>
+</html>
